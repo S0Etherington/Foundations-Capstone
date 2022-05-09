@@ -1,0 +1,122 @@
+body {
+    background-color: #126080;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    margin: 0px;
+    z-index: -100;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #BEAEE2;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    margin: none;
+    height: 200px;
+}
+
+/* #mainHolder {
+    display: flex;
+    justify-content: space-between;
+    width:900px ;
+ 
+    z-index: -5;
+} */
+
+#bigOlGamePage{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* images */
+#base-doll {
+    height: 950px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #8a2f2f;
+}
+
+#specialImage {
+    position: absolute;
+    height: 950px;
+}
+
+#shirtImage {
+    z-index: 3;
+}
+
+#pantsImage {
+    z-index: 2;
+}
+
+#socksImage {
+    z-index: 1;
+}
+
+#accessoryImage {
+    z-index: 4;
+}
+
+/* text */
+#errorText {
+    display: none;
+    color: red;
+}
+
+/* buttons */
+
+.button{
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #F7DBF0;
+    color:rgb(59, 59, 59);
+    position: relative;
+    left: 750px;
+    bottom: 850px;
+   
+}
+.button:hover{
+    border-color: rgba(59, 59, 59, 1);
+}
+
+.category-button{
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+}
+
+.shirt-option {
+    display: none;
+    z-index: 10;
+}
+
+.pants-option {
+    display: none;
+}
+
+.socks-option {
+    display: none;
+}
+
+.accessory-option {
+    display: none;
+}
+
+.clothesImage {
+    position: absolute;
+    height: 950px;
+}
+
+#saveButton {
+    height: 25px;
+}

@@ -1,0 +1,19 @@
+{
+    "activeUser": null,
+
+    "users": [
+        {
+            "user_id": 1,
+            "username": "summer",
+            "password": "123456",
+            "outfits": []
+        },
+    
+        {
+            "user_id": 2,
+            "username": "Guest",
+            "password": "summerrocks",
+            "outfits": []
+        }
+    ]   
+}
