@@ -1,5 +1,3 @@
-const baseUrl = "http://localhost:5505"
-
 const express = require('express')
 const path = require('path')
 const app = express()
@@ -13,7 +11,7 @@ app.use(express.static('public'))
 const port = process.env.PORT || 5505
 
 const {
-    getUser, newOutfit, loadOutfit
+    getUser, newOutfit,
 } = require('./controller')
 
 app.post(`/api/users`, getUser)

@@ -1,5 +1,3 @@
-const baseUrl = "http://localhost:5505"
-
 let outfitID = 1
 
 // making an object that contains all category buttons
@@ -148,7 +146,7 @@ saveButton.addEventListener('click', () => {
     if(socks.src === wardrobe.petSocks){
         saveSocks = "Socks: Pets"
     } else if (socks.src === wardrobe.pokemonSocks){
-        saveSocks = "Socks: Joely's Art"
+        saveSocks = "Socks: Falinks"
     } else if (socks.src === wardrobe.adderall){
         saveSocks = "Adderall"
     } else if (socks.src === ""){
@@ -174,7 +172,7 @@ saveButton.addEventListener('click', () => {
     let newOutfit = `${saveShirt, savePants, saveSocks, saveAccessory,saveSpecial}`
     
 
-    axios.post(`${baseUrl}/api/outfit/`, newOutfit)
+    axios.post(`/api/outfit/`, newOutfit)
 
     const outfitHolder = document.getElementById("outfit-holder")
     const newButton = document.createElement('p')
