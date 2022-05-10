@@ -52,7 +52,7 @@ const wardrobe = {
     tears: "https://i.postimg.cc/gJbtsNDW/IMG-0095.png",
     cats: "https://i.postimg.cc/XJKHzdHy/IMG-0094.png",
     monster: "https://i.postimg.cc/6q9jJqgb/IMG-0096.png",
-    special: "https://i.postimg.cc/YSW-yQJQR/IMG-0093.png"
+    special: "https://i.postimg.cc/YSWyQJQR/IMG-0093.png"
 }
 
 // function to display the options for each category you select
