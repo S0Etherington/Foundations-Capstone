@@ -11,7 +11,7 @@ app.use(express.static('public'))
 const port = process.env.PORT || 5505
 
 const {
-    getUser, newOutfit,
+    getUser, newOutfit, loadOutfit
 } = require('./controller')
 
 app.post(`/api/users`, getUser)
