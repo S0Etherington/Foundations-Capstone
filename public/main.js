@@ -42,19 +42,19 @@ let optionButtons = {
 let clothes = document.getElementsByClassName("clothesImage")
 
 const wardrobe = {
-    immuneToFireball: "../images/IMG_0092.PNG",
-    exam: "../images/IMG_0091.PNG",
-    hello: "../images/IMG_0090.PNG",
-    pokemon: "../images/IMG_0088.PNG",
-    goats: "../images/IMG_0089.PNG",
-    blenderBottle: "../images/IMG_0087.PNG",
-    petSocks: "../images/IMG_0084.PNG",
-    pokemonSocks: "../images/IMG_0085.PNG",
-    adderall: "../images/IMG_0086.PNG",
-    tears: "../images/IMG_0095.PNG",
-    cats: "../images/IMG_0094.PNG",
-    monster: "../images/IMG_0096.PNG",
-    special: "../images/IMG_0093.PNG"
+    immuneToFireball: "https://i.postimg.cc/3x6c4K0W/IMG-0092.png",
+    exam: "https://i.postimg.cc/26nMNP6y/IMG-0091.png",
+    hello: "https://i.postimg.cc/PrXc0Vkf/IMG-0090.png",
+    pokemon: "https://i.postimg.cc/fRkPR3L6/IMG-0088.png",
+    goats: "https://i.postimg.cc/NfdVt8g6/IMG-0089.png",
+    blenderBottle: "https://i.postimg.cc/XNcmHSmD/IMG-0087.png",
+    petSocks: "https://i.postimg.cc/KjNWRBty/IMG-0084.png",
+    pokemonSocks: "https://i.postimg.cc/j2K9xZwX/IMG-0085.png",
+    adderall: "https://i.postimg.cc/1zk2T9yb/IMG-0086.png",
+    tears: "https://i.postimg.cc/gJbtsNDW/IMG-0095.png",
+    cats: "https://i.postimg.cc/XJKHzdHy/IMG-0094.png",
+    monster: "https://i.postimg.cc/6q9jJqgb/IMG-0096.png",
+    special: "https://i.postimg.cc/YSWyQJQR/IMG-0093.png"
 }
 
 // function to display the options for each category you select
@@ -107,38 +107,105 @@ optionButtons.accessory2.addEventListener('click', () => displayImage(wardrobe.m
 optionButtons.accessory3.addEventListener('click', () => displayImage(wardrobe.cats, "accessoryImage"))
 optionButtons.special.addEventListener('click', () => surprise(wardrobe.special, "specialImage"))
 
-const loadOutfit = (id) => {
-    axios.get(`${baseUrl}/api/outfit?id=${id}`)
-}
+// save outfit functionality
 
 let saveButton = document.getElementById('saveButton')
 
-saveButton.addEventListener('click', () => {
-    const shirt = document.getElementById("shirtImage")
-    const pants = document.getElementById('pantsImage')
-    const socks = document.getElementById('socksImage')
-    const accessory = document.getElementById('accessoryImage')
-    const special = document.getElementById('specialImage')
+const shirt = document.getElementById("shirtImage")
+const pants = document.getElementById('pantsImage')
+const socks = document.getElementById('socksImage')
+const accessory = document.getElementById('accessoryImage')
+const special = document.getElementById('specialImage')
 
-    const newOutfit = {
-        outfit: {
-            shirt,
-            pants,
-            socks,
-            accessory,
-            special,
-            id: outfitID
-        }      
+saveButton.addEventListener('click', () => {
+
+    let saveShirt = null
+    let savePants = null
+    let saveSocks = null
+    let saveAccessory = null
+    let saveSpecial = null
+
+    if(shirt.src === wardrobe.immuneToFireball){
+        saveShirt = "Shirt: Immune to Fireball"
+    } else if (shirt.src === wardrobe.exam){
+        saveShirt = "Shirt: Week 4 Exam"
+    } else if (shirt.src === wardrobe.hello){
+        saveShirt = "Shirt: Helloooooo"
+    } else if (shirt.src === ""){
+        saveShirt = "Shirt: None"
     }
+
+    if(pants.src === wardrobe.pokemon){
+        savePants = "Pants: Pokemon Pants"
+    } else if (pants.src = wardrobe.goats){
+        savePants = "Pants: Goats"
+    } else if (pants.src === wardrobe.blenderBottle){
+        savePants = "Pants: Blender Bottle"
+    } else if (pants.src === ""){
+        savePants = "Pants: None"
+    }
+
+    if(socks.src === wardrobe.petSocks){
+        saveSocks = "Socks: Pets"
+    } else if (socks.src === wardrobe.pokemonSocks){
+        saveSocks = "Socks: Joely's Art"
+    } else if (socks.src === wardrobe.adderall){
+        saveSocks = "Adderal"
+    } else if (socks.src === ""){
+        saveSocks = "Socks: None"
+    }
+
+    if(accessory.src === wardrobe.cats){
+        saveAccessory = "Accessory: Joely's Cats"
+    } else if (accessory.src === wardrobe.tears){
+        saveAccessory = "Accessory: Scott's Favorite Drink"
+    } else if (accessory.src === wardrobe.monster){
+        saveAccessory = "Accessory: Kyle's Life Force"
+    } else if (accessory.src === ""){
+        saveAccessory = "Accessory: None"
+    }
+
+    if(special.src === wardrobe.special){
+        saveSpecial = "Special: Et Tu Brute?"
+    } else if (special.src === ""){
+        saveSpecial = "Special: None"
+    }
+
+    let newOutfit = `${saveShirt, savePants, saveSocks, saveAccessory,saveSpecial}`
+    
 
     axios.post(`${baseUrl}/api/outfit/`, newOutfit)
 
     const outfitHolder = document.getElementById("outfit-holder")
-    const newButton = document.createElement('button')
+    const newButton = document.createElement('p')
     newButton.setAttribute('id', `outfit${outfitID}`)
-    newButton.innerHTML = `Outfit ${outfitID}`
+    newButton.innerHTML = `Outfit ${outfitID}: ${saveShirt}, ${savePants}, ${saveSocks}, ${saveAccessory}, ${saveSpecial}`
 
     outfitID++
     outfitHolder.appendChild(newButton)
     newButton.addEventListener('click', loadOutfit(`${outfitID}`))
+})
+
+// log-in functionality
+let loginButton = document.getElementById("login-submit")
+let usernameInput = document.getElementById("username-login")
+let passwordInput = document.getElementById("password-login")
+
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    const username = usernameInput.value 
+    const password = passwordInput.value
+    console.log(username,password)
+    axios.post(`${baseUrl}/api/users`, {
+        username,
+        password
+    })
+    .then((res) => {
+        if(res.status === 200){
+            alert("Logged in!")
+        } else {
+           const error = document.getElementById("errorText")
+           error.style.display = 'block'
+        }
+    })
 })

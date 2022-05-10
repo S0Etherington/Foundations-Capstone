@@ -13,8 +13,18 @@
             <a href="./main.html" id="home-button">Home</a>
         </div>
         <h1>Developer Dress Up</h1>
-        <div id="login-button-box">
-            <a href="./log-in.html" id="login-button">Login</a>
+        <div id="login-box">
+            <p id="errorText">Invalid Credentials</p>
+            <p id="loggedIn">Logged in!</p>
+            <form id="log-in">
+                <label for="username">Username</label><br>
+                <input type="text" placeholder="Enter username" id="username-login"><br>
+    
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="Enter Password" id="password-login"><br>
+    
+                <button type="submit" id="login-submit">Login</button>
+            </form>
         </div>
     </nav>
 
@@ -34,7 +44,7 @@
                         <img src="" id="accessoryImage" class="clothesImage"/>
                         <img src="" id="specialImage"/>
                     </section>
-                    <img src="../images/IMG_0083.PNG" id="base-doll" alt="Base doll image"/>
+                    <img src="https://i.postimg.cc/cJgPXKGQ/IMG-0083.png" id="base-doll" alt="Base doll image"/>
                 </div>
                 <section id="categories">
                     <button id="shirts" class="category-button button">

@@ -1,5 +1,4 @@
 let users = require('./users.json')
-let globalUserId = 3
 let userOutfitId = 1
 const fs = require('fs')
 
@@ -17,9 +16,7 @@ const writeJson = (current) => {
 module.exports = {
     getUser: (req, res) => {
         const {username, password} = req.body
-        console.log(req.body)
         const current = users.users.find(elem => elem.username === username)
-        console.log(users.users)
         if(current){
             if(current.password === password){
                 res.status(200).send(current)
@@ -35,7 +32,8 @@ module.exports = {
     newOutfit: (req, res) => {
         const {shirt, pants, socks, accessory, special} = req.body
         let userId = users.activeUser
-        let newOutfit = {
+        
+        const newOutfit = {
             id: userOutfitId,
             shirt,
             pants,

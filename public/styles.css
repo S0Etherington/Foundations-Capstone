@@ -30,6 +30,12 @@ nav {
     justify-content: space-around;
 }
 
+#login-box{
+    position: relative;
+    right: 100px;
+    top: 20px;
+}
+
 /* images */
 #base-doll {
     height: 950px;
@@ -65,6 +71,10 @@ nav {
 #errorText {
     display: none;
     color: red;
+}
+
+#loggedIn{
+    display: none;
 }
 
 /* buttons */
@@ -119,4 +129,17 @@ nav {
 
 #saveButton {
     height: 25px;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #F7DBF0;
+    color:rgb(59, 59, 59);
+}
+#saveButton:hover{
+    border-color: rgba(59, 59, 59, 1);
 }
