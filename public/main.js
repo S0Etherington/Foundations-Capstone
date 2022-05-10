@@ -148,7 +148,7 @@ saveButton.addEventListener('click', () => {
     } else if (socks.src === wardrobe.pokemonSocks){
         saveSocks = "Socks: Falinks"
     } else if (socks.src === wardrobe.adderall){
-        saveSocks = "Adderall"
+        saveSocks = "Socks: Adderall"
     } else if (socks.src === ""){
         saveSocks = "Socks: None"
     }
