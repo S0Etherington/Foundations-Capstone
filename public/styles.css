@@ -1,11 +1,12 @@
 body {
-    background-color: #126080;
+    background-color: #f9f9f9;
     display: flex;
     align-content: space-between;
     flex-direction: column;
     margin: 0px;
     z-index: -100;
     overflow-x: hidden;
+    font-family: kalam;
 }
 
 nav {
@@ -15,19 +16,19 @@ nav {
     justify-content: space-between;
     margin: none;
     height: 200px;
+    font-family: kalam;
+    margin-bottom: 30px;
 }
 
-/* #mainHolder {
+#loginPage{
     display: flex;
-    justify-content: space-between;
-    width:900px ;
- 
-    z-index: -5;
-} */
+    justify-content: center;
+    align-content: center;
+}
 
 #bigOlGamePage{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #login-box{
@@ -36,19 +37,47 @@ nav {
     top: 20px;
 }
 
-/* images */
-#base-doll {
-    height: 950px;
+#loginFunction{
+    width: 258px;
+    margin: auto;
+}
+
+input{
+    height: 50px;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #BEAEE2;
+    border-width: 5px;
+}
+
+#home-button-holder{
     position: relative;
-    top: 0;
-    left: 0;
+    left: 100px;
+    top: 20px
+}
+
+/* images */
+#doll-holder{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    border-radius: 50px;
+    border-width: 30px;
+    border-style: solid;
+    border-color: #BEAEE2;
+}
+#base-doll {
+    height: 925px;
     z-index: -1;
-    background-color: #8a2f2f;
 }
 
 #specialImage {
     position: absolute;
-    height: 950px;
+    height: 925px;
 }
 
 #shirtImage {
@@ -68,19 +97,70 @@ nav {
 }
 
 /* text */
+h1{
+    font-size: 64px;
+    /* position: relative;
+    left: 650px */
+}
+
 #errorText {
     display: none;
     color: red;
 }
 
-#loggedIn{
-    display: none;
+#user-holder{
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width:500px;
+}
+
+#width{
+    width: 250px;
+    background-color: #F7DBF0;
+    height: 800px;
+    margin-top: 150px;
+    border-color: #BEAEE2;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 10px;
+}
+
+footer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #BEAEE2;
+    position: sticky;
+}
+
+label{
+    font-size: 30px;
 }
 
 /* buttons */
 
+#buttons{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 150px;
+}
+
+#categories{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #BEAEE2;
+    border-radius: 10px;
+    height: 600px;
+    width: 150px;
+    margin-top: 150px;
+}
+
 .button{
-    display: inline-block;
     padding: 0.3em 1.2em;
     margin:0 0.1em 0.1em 0;
     border: 0.16em solid rgba(255, 255, 255, 0);
@@ -90,10 +170,10 @@ nav {
     transition: all 0.2s;
     background-color: #F7DBF0;
     color:rgb(59, 59, 59);
-    position: relative;
-    left: 750px;
-    bottom: 850px;
-   
+    font-family: kalam;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 25px;
 }
 .button:hover{
     border-color: rgba(59, 59, 59, 1);
@@ -124,7 +204,7 @@ nav {
 
 .clothesImage {
     position: absolute;
-    height: 950px;
+    height: 925px;
 }
 
 #saveButton {
@@ -139,7 +219,58 @@ nav {
     transition: all 0.2s;
     background-color: #F7DBF0;
     color:rgb(59, 59, 59);
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+    font-family: kalam;
+    cursor: pointer;
+    margin-left: 25px;
 }
 #saveButton:hover{
     border-color: rgba(59, 59, 59, 1);
+}
+
+#saveButtonHolder{
+    margin-top: 60px;
+}
+
+#login-submit{
+    height: 25px;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #F7DBF0;
+    color:rgb(59, 59, 59);
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    font-family: kalam;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#login-submit:hover{
+    border-color: rgba(59, 59, 59, 1);
+}
+
+.a{
+    height: 170px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+a{
+    background-color: #F7DBF0;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: rgb(59, 59, 59);
+    font-size: 25px;
 }

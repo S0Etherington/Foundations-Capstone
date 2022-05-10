@@ -119,11 +119,11 @@ const special = document.getElementById('specialImage')
 
 saveButton.addEventListener('click', () => {
 
-    let saveShirt = null
-    let savePants = null
-    let saveSocks = null
-    let saveAccessory = null
-    let saveSpecial = null
+    let saveShirt = "Shirt: None"
+    let savePants = "Pants: None"
+    let saveSocks = "Socks: None"
+    let saveAccessory = "Accessories: None"
+    let saveSpecial = "Special: None"
 
     if(shirt.src === wardrobe.immuneToFireball){
         saveShirt = "Shirt: Immune to Fireball"
@@ -137,7 +137,7 @@ saveButton.addEventListener('click', () => {
 
     if(pants.src === wardrobe.pokemon){
         savePants = "Pants: Pokemon Pants"
-    } else if (pants.src = wardrobe.goats){
+    } else if (pants.src === wardrobe.goats){
         savePants = "Pants: Goats"
     } else if (pants.src === wardrobe.blenderBottle){
         savePants = "Pants: Blender Bottle"
@@ -150,7 +150,7 @@ saveButton.addEventListener('click', () => {
     } else if (socks.src === wardrobe.pokemonSocks){
         saveSocks = "Socks: Joely's Art"
     } else if (socks.src === wardrobe.adderall){
-        saveSocks = "Adderal"
+        saveSocks = "Adderall"
     } else if (socks.src === ""){
         saveSocks = "Socks: None"
     }
@@ -179,33 +179,9 @@ saveButton.addEventListener('click', () => {
     const outfitHolder = document.getElementById("outfit-holder")
     const newButton = document.createElement('p')
     newButton.setAttribute('id', `outfit${outfitID}`)
-    newButton.innerHTML = `Outfit ${outfitID}: ${saveShirt}, ${savePants}, ${saveSocks}, ${saveAccessory}, ${saveSpecial}`
+    newButton.innerHTML = `Outfit ${outfitID}: ${saveShirt}, ${savePants}, ${saveSocks}, ${saveAccessory}`
 
     outfitID++
     outfitHolder.appendChild(newButton)
-    newButton.addEventListener('click', loadOutfit(`${outfitID}`))
 })
 
-// log-in functionality
-let loginButton = document.getElementById("login-submit")
-let usernameInput = document.getElementById("username-login")
-let passwordInput = document.getElementById("password-login")
-
-loginButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    const username = usernameInput.value 
-    const password = passwordInput.value
-    console.log(username,password)
-    axios.post(`${baseUrl}/api/users`, {
-        username,
-        password
-    })
-    .then((res) => {
-        if(res.status === 200){
-            alert("Logged in!")
-        } else {
-           const error = document.getElementById("errorText")
-           error.style.display = 'block'
-        }
-    })
-})

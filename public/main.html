@@ -5,37 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
     <title>Developer Dress Up</title>
 </head>
 <body>
     <nav id="banner">
-        <div id="home-button-holder">
+        <div id="home-button-holder" class="a">
             <a href="./main.html" id="home-button">Home</a>
         </div>
         <h1>Developer Dress Up</h1>
-        <div id="login-box">
-            <p id="errorText">Invalid Credentials</p>
-            <p id="loggedIn">Logged in!</p>
-            <form id="log-in">
-                <label for="username">Username</label><br>
-                <input type="text" placeholder="Enter username" id="username-login"><br>
-    
-                <label for="password">Password</label><br>
-                <input type="password" placeholder="Enter Password" id="password-login"><br>
-    
-                <button type="submit" id="login-submit">Login</button>
-            </form>
+        <div id="login-box" class="a">
+            <a href="./log-in.html" id="login-button">Login</a>
         </div>
     </nav>
 
-        <div id="user-holder">
-            User Outfits: 
+    <div id="bigOlGamePage">
+        <div id="width">
             <div id="outfit-holder">
-                
+                User Outfits: <br>
+     
             </div>
         </div>
-        <div id="bigOlGamePage">
-            <main id="mainHolder">
                 <div id="doll-holder">
                     <section id="clothes">
                         <img src="" id="shirtImage" class="clothesImage"/> 
@@ -46,72 +36,75 @@
                     </section>
                     <img src="https://i.postimg.cc/cJgPXKGQ/IMG-0083.png" id="base-doll" alt="Base doll image"/>
                 </div>
-                <section id="categories">
-                    <button id="shirts" class="category-button button">
-                        Shirts
-                    </button>
-                    <div id="shirt-options">
-                        <button id="shirtOption1" class="shirt-option button">
-                            Orange
+                <section id="buttons">
+                    <section id="categories">
+                        <button id="shirts" class="category-button button">
+                            Shirts
                         </button>
-                        <button id="shirtOption2" class="shirt-option button">
-                            Blue
+                        <div id="shirt-options">
+                            <button id="shirtOption1" class="shirt-option button">
+                                Orange
+                            </button>
+                            <button id="shirtOption2" class="shirt-option button">
+                                Blue
+                            </button>
+                            <button id="shirtOption3" class="shirt-option button">
+                                Purple
+                            </button>
+                        </div>
+                        <button id="pants" class="category-button button">
+                            Pants
                         </button>
-                        <button id="shirtOption3" class="shirt-option button">
-                            Purple
+                        <div id="pants-options">
+                            <button id="pantsOption1" class="pants-option button">
+                                Yellow
+                            </button>
+                            <button id="pantsOption2" class="pants-option button">
+                                Green
+                            </button>
+                            <button id="pantsOption3" class="pants-option button">
+                                Grey
+                            </button>
+                        </div>
+                        <button id="socks" class="category-button button">
+                            Socks
                         </button>
-                    </div>
-                    <button id="pants" class="category-button button">
-                        Pants
-                    </button>
-                    <div id="pants-options">
-                        <button id="pantsOption1" class="pants-option button">
-                            Yellow
+                        <div id="socks-options">
+                            <button id="sockOption1" class="socks-option button">
+                                Blue
+                            </button>
+                            <button id="sockOption2" class="socks-option button">
+                                Grey
+                            </button>
+                            <button id="sockOption3" class="socks-option button">
+                                Orange
+                            </button>
+                        </div>
+                        <button id="accessories" class="category-button button">
+                            Accessories
                         </button>
-                        <button id="pantsOption2" class="pants-option button">
-                            Green
+                        <div id="accessories-options">
+                            <button id="accessoryOption1" class="accessory-option button">
+                                Favorite Drink
+                            </button>
+                            <button id="accessoryOption3" class="accessory-option button">
+                                Companionship
+                            </button>
+                            <button id="accessoryOption2" class="accessory-option button">
+                                Life Force
+                            </button>
+                        </div>
+                        <button id="special-option" class="category-button special-option button">
+                            Surprise!
                         </button>
-                        <button id="pantsOption3" class="pants-option button">
-                            Grey
-                        </button>
-                    </div>
-                    <button id="socks" class="category-button button">
-                        Socks
-                    </button>
-                    <div id="socks-options">
-                        <button id="sockOption1" class="socks-option button">
-                            Blue
-                        </button>
-                        <button id="sockOption2" class="socks-option button">
-                            Grey
-                        </button>
-                        <button id="sockOption3" class="socks-option button">
-                            Orange
-                        </button>
-                    </div>
-                    <button id="accessories" class="category-button button">
-                        Accessories
-                    </button>
-                    <div id="accessories-options">
-                        <button id="accessoryOption1" class="accessory-option button">
-                            Favorite Drink
-                        </button>
-                        <button id="accessoryOption3" class="accessory-option button">
-                            Companionship
-                        </button>
-                        <button id="accessoryOption2" class="accessory-option button">
-                            Life Force
-                        </button>
-                    </div>
-                    <button id="special-option" class="category-button special-option button">
-                        Surprise!
-                    </button>
-            </main>
-            </section>
-            <button id="saveButton">
-                Save Outfit
-            </button>
-        </div>
+                        <div id="saveButtonHolder">
+                            <button id="saveButton">
+                                Save Outfit
+                            </button>
+                        </div>
+                    </section>
+                </section>
+    </div>
 
     <footer>
         <p>Copyright Summer Etherington 2022</p>
