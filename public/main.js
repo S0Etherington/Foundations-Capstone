@@ -33,7 +33,7 @@ let optionButtons = {
     accessory1: document.getElementById("accessoryOption1"),
     accessory2: document.getElementById("accessoryOption2"),
     accessory3: document.getElementById("accessoryOption3"),
-    special: document.getElementById("special-option")
+    // special: document.getElementById("special-option")
 }
 
 // selecting all clothing images
@@ -103,7 +103,7 @@ optionButtons.socks3.addEventListener('click', () => displayImage(wardrobe.adder
 optionButtons.accessory1.addEventListener('click', () => displayImage(wardrobe.tears, "accessoryImage"))
 optionButtons.accessory2.addEventListener('click', () => displayImage(wardrobe.monster, "accessoryImage"))
 optionButtons.accessory3.addEventListener('click', () => displayImage(wardrobe.cats, "accessoryImage"))
-optionButtons.special.addEventListener('click', () => surprise(wardrobe.special, "specialImage"))
+// optionButtons.special.addEventListener('click', () => surprise(wardrobe.special, "specialImage"))
 
 // save outfit functionality
 
