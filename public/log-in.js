@@ -1,5 +1,3 @@
-const baseUrl = "http://localhost:5505"
-
 let loginButton = document.getElementById("login-submit")
 let usernameInput = document.getElementById("username-login")
 let passwordInput = document.getElementById("password-login")
